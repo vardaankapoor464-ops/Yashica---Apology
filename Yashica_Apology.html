@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yashica 🌷</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background:linear-gradient(135deg,#fff1f6,#f9f2ff,#fff8ed);
+    color:#4a3540; overflow:hidden;
+  }
+  .hearts span{position:fixed; bottom:-30px; font-size:22px; animation:float 8s linear infinite; opacity:.7}
+  .hearts span:nth-child(1){left:8%;animation-delay:0s}.hearts span:nth-child(2){left:22%;animation-delay:2s}
+  .hearts span:nth-child(3){left:40%;animation-delay:4s}.hearts span:nth-child(4){left:62%;animation-delay:1s}
+  .hearts span:nth-child(5){left:82%;animation-delay:3s}
+  @keyframes float{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+  .card{
+    width:min(92%,560px); max-height:90vh; overflow:auto; padding:34px 28px;
+    background:rgba(255,255,255,.84); backdrop-filter:blur(12px);
+    border:1px solid rgba(255,190,215,.55); border-radius:30px;
+    box-shadow:0 20px 60px rgba(125,75,100,.16); text-align:center;
+    position:relative; z-index:2;
+  }
+  .flower{font-size:42px}.title{font-size:32px;margin:8px 0 4px;color:#9a5574}
+  .subtitle{font-size:15px;color:#967987;margin-bottom:24px}
+  .message{text-align:left;line-height:1.75;font-size:16px}
+  .message p{margin:0 0 16px}
+  .highlight{font-weight:700;color:#9a5574}
+  .question{font-size:22px;font-weight:700;margin:25px 0 18px;color:#7f4c65}
+  button{
+    border:0;border-radius:999px;padding:13px 22px;margin:6px;
+    font-size:15px;font-weight:700;cursor:pointer;transition:.2s;
+  }
+  #yes{background:#f4b7ce;color:#67384d}.time{background:#f3e2ea;color:#704c5c}
+  button:hover{transform:translateY(-2px) scale(1.02)}
+  #final{display:none;margin-top:20px;padding:18px;border-radius:20px;background:#fff0f6;line-height:1.65}
+  .tiny{font-size:12px;color:#a58c98;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="hearts"><span>♡</span><span>🌷</span><span>♡</span><span>🫶🏻</span><span>♡</span></div>
+
+<main class="card">
+  <div class="flower">🌷</div>
+  <div class="title">Hey Yashica 🐻‍❣️</div>
+  <div class="subtitle">There’s something I really want to tell you…</div>
+
+  <section class="message">
+    <p><b>I’m sorry.</b> 🥺</p>
+
+    <p>I know you’ve been feeling a little low since yesterday, and I know that because of everything that happened, I’ve made you feel frustrated, hurt, and maybe even more insecure. I’m genuinely sorry for that 🥺🫶🏻</p>
+
+    <p>I know I’ve made multiple mistakes, and I’m not going to make excuses for them. I know some of my actions and words have affected you more than I probably realized at the time.</p>
+
+    <p>I also understand that because of what you’ve experienced in your past relationship, you may have a fear that I would always prioritize my family before you, or that you might not be as important to me as you deserve to be.</p>
+
+    <p class="highlight">But Yashica, it’s not like that with me. 🫶🏻</p>
+
+    <p>My family will always be important to me, but that doesn't mean you come second or that your feelings don't matter. I never want you to feel like you have to compete with anyone for your place in my life 🌷</p>
+
+    <p>I understand that sometimes my actions may have made you feel that way, and I’m truly sorry. I don't expect one “sorry” to magically fix everything. I know I have to show you through my actions that you can feel secure with me 🥹</p>
+
+    <p>I care about you a lot, and the last thing I want is to be the reason you feel low, frustrated, or start questioning yourself or our relationship 🫂</p>
+
+    <p>You deserve reassurance, understanding, and consistency from me — and I know I need to do better at giving you that 🤍</p>
+
+    <p><b>I’m sorry, Yashica. 🥺🌷</b></p>
+
+    <p>I may not always get everything right, but I genuinely want to learn from my mistakes and become better for us 🫶🏻</p>
+  </section>
+
+  <div class="question">So… can you forgive me? 👉🏻👈🏻🥺</div>
+  <button id="yes" onclick="forgive()">YES 🥺🤍</button>
+  <button class="time" onclick="needTime()">I NEED SOME TIME 🌷</button>
+
+  <div id="final"></div>
+  <div class="tiny">Made with a little courage and a lot of love 🌸</div>
+</main>
+
+<script>
+function forgive(){
+  const f=document.getElementById('final');
+  f.style.display='block';
+  f.innerHTML='<b>Thank you, Yashica 🥹🤍</b><br><br>I promise I’ll try to show you through my actions that you never have to feel alone, unimportant, or insecure with me. 🌷🫶🏻<br><br>Now come here… 🫂';
+}
+function needTime(){
+  const f=document.getElementById('final');
+  f.style.display='block';
+  f.innerHTML='<b>That’s okay, Yashica 🌷</b><br><br>Take all the time you need. I don’t want to pressure you. I just wanted you to know that I’m genuinely sorry, and I care about how you feel. 🤍🫶🏻';
+}
+</script>
+</body>
+</html>
